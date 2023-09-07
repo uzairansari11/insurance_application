@@ -1,5 +1,4 @@
-import { Text, StyleSheet } from "react-native";
-import { TouchableOpacity } from "react-native";
+import { StyleSheet, Text, TouchableOpacity } from "react-native";
 
 export default function TocButton({
 	title,
