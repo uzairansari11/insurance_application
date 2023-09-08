@@ -5,6 +5,7 @@ export default function TocButton({
 	onPress,
 	disabled,
 	backgroundColor,
+	textSize,
 }) {
 	return (
 		<TouchableOpacity
@@ -17,7 +18,15 @@ export default function TocButton({
 			onPress={onPress}
 			disabled={disabled}
 		>
-			<Text style={styles.text}>{title}</Text>
+			<Text
+				style={{
+					textAlign: "center",
+					color: "white",
+					fontSize: textSize || 20,
+				}}
+			>
+				{title}
+			</Text>
 		</TouchableOpacity>
 	);
 }
@@ -35,9 +44,5 @@ const styles = StyleSheet.create({
 	disabledBackground: {
 		backgroundColor: "#e5e5e5",
 	},
-	text: {
-		textAlign: "center",
-		color: "white",
-		fontSize: 20,
-	},
+
 });

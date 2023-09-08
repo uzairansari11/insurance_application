@@ -2,11 +2,11 @@ import { FontAwesome } from "@expo/vector-icons";
 import { Input } from "@rneui/themed";
 import React, { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { OTP_URL } from "../constants/constants";
 import TocButton from "../component/TocButton";
+import { OTP_URL } from "../constants/constants";
 import { NUMBER_PATTERN } from "../validation/validation";
 
-export default function Login({ navigation }) {
+export default function LoginScreen({ navigation }) {
 	const [number, setNumber] = useState("");
 
 	const handleNumber = (data) => {

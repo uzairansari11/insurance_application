@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import { StyleSheet, Text, TextInput, View } from "react-native";
 import TocButton from "../component/TocButton";
 
-export default function OtpVerification({ length = 4 }) {
+export default function OtpScreen({ length = 4, navigation }) {
 	const [otp, setOtp] = useState(Array(length).fill(""));
 	const otpInputs = useRef([]);
 
@@ -44,7 +44,7 @@ export default function OtpVerification({ length = 4 }) {
 	const handleSubmitOtp = () => {
 		if (isOtpComplete()) {
 			const otpValue = otp.join("");
-			alert("OTP submitted: " + otpValue);
+			navigation.navigate("Main");
 		} else {
 			alert("Please fill in all OTP fields.");
 		}

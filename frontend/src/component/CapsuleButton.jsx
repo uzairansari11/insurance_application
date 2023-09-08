@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
 		paddingVertical: 10,
 		elevation: 5,
 		shadowColor: "black",
+		alignSelf: "flex-start",
 	},
 	isActive: {
 		backgroundColor: "black",
