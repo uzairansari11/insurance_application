@@ -6,6 +6,8 @@ export default function TocButton({
 	disabled,
 	backgroundColor,
 	textSize,
+	width,
+	marginTop,
 }) {
 	return (
 		<TouchableOpacity
@@ -14,6 +16,8 @@ export default function TocButton({
 				disabled
 					? styles.disabledBackground
 					: { backgroundColor } || styles.enabledBackground,
+				{ width: width || "100%" },
+				{ marginTop: marginTop || 10 },
 			]}
 			onPress={onPress}
 			disabled={disabled}
@@ -33,7 +37,6 @@ export default function TocButton({
 
 const styles = StyleSheet.create({
 	buttonContainer: {
-		width: "80%",
 		paddingVertical: 10,
 		borderRadius: 6,
 		alignSelf: "center",
@@ -44,5 +47,4 @@ const styles = StyleSheet.create({
 	disabledBackground: {
 		backgroundColor: "#e5e5e5",
 	},
-
 });

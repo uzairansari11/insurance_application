@@ -28,12 +28,12 @@ const styles = StyleSheet.create({
 		height: 90,
 		borderRadius: 20,
 		padding: 10,
-		backgroundColor: "#96B6C5",
+		backgroundColor: "#DBDFEA",
 		justifyContent: "space-between",
 		alignItems: "center",
 	},
 	profileSetup: {
-		gap: 10,
-		paddingHorizontal: 4,
+		gap: 4,
+		paddingHorizontal: 6,
 	},
 });

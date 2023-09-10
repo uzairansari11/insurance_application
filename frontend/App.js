@@ -5,10 +5,9 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 import Routing from "./src/routing/Routing";
 
 export default function App() {
-	const [auth, setAuth] = React.useState();
 	return (
 		<>
-			<StatusBar backgroundColor="black" barStyle="light-content" />
+			<StatusBar backgroundColor="white" barStyle="dark-content" />
 			<SafeAreaProvider>
 				<View style={styles.container}>
 					<NavigationContainer>

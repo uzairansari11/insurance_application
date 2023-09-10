@@ -2,7 +2,7 @@ import { createMaterialBottomTabNavigator } from "@react-navigation/material-bot
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import Discover from "../screen/Discover";
 import HomeScreen from "../screen/HomeScreen";
-import SettingsScreen from "../screen/SettingsScreen";
+import SettingsScreen from "../screen/MyPolicies";
 import Support from "../screen/Support";
 const Tab = createMaterialBottomTabNavigator();
 

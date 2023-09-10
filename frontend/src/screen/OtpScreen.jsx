@@ -72,6 +72,7 @@ export default function OtpScreen({ length = 4, navigation }) {
 				onPress={handleSubmitOtp}
 				disabled={!isOtpComplete()}
 				backgroundColor={"#6699cc"}
+				width={"90%"}
 			/>
 		</View>
 	);

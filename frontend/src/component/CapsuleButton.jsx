@@ -1,9 +1,10 @@
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
 
-export default function CapsuleButton({ title, isActive }) {
+export default function CapsuleButton({ title, isActive, onPress }) {
 	return (
 		<TouchableOpacity
 			style={[styles.container, isActive ? styles.isActive : styles.isInactive]}
+			onPress={onPress}
 		>
 			<Text
 				style={[

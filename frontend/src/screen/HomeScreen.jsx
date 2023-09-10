@@ -1,8 +1,12 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { ScrollView, StyleSheet, View } from "react-native";
 import AvatarComponent from "../component/AvatarComponent";
+import InsuranceOptionsSection from "../component/InsuranceOptionsSection";
+import InsuranceTopSection from "../component/InsuranceTopSection";
 import ProfileComponent from "../component/ProfileComponent";
 import Welcome from "../component/Welcome";
+import { MAINTAIN_OPTIONS, NEW_OPTIONS } from "../constants/constants";
+import Trending from "../component/Trending";
 
 export default function HomeScreen() {
 	return (
@@ -18,7 +22,20 @@ export default function HomeScreen() {
 					/>
 				</View>
 			</View>
-			<ProfileComponent />
+			<ScrollView showsVerticalScrollIndicator={false}>
+				<ProfileComponent />
+				<InsuranceTopSection />
+				<InsuranceOptionsSection
+					data={NEW_OPTIONS}
+					title={"Buying a new car?"}
+				/>
+				<InsuranceOptionsSection
+					data={MAINTAIN_OPTIONS}
+					title={"Maintain your car"}
+				/>
+				{/* <Trending headingTitle={"Trending now @Insurance "} /> */}
+
+			</ScrollView>
 		</View>
 	);
 }

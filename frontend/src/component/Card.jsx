@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-export default function Card({ IconName, size, color, text }) {
+export default function Card({ IconName, size, color, title }) {
 	return (
 		<View style={styles.container}>
 			<MaterialCommunityIcons
@@ -8,7 +8,7 @@ export default function Card({ IconName, size, color, text }) {
 				size={size || 24}
 				color={color || "black"}
 			/>
-			{text ? <Text style={styles.text}>{text}</Text> : null}
+			{title ? <Text style={styles.text}>{title}</Text> : null}
 		</View>
 	);
 }
