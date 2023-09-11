@@ -4,12 +4,19 @@ import Card from "./Card";
 
 export default function InsuranceOptionsSection({ title, data }) {
 	return (
-		<View >
-			<Text style={styles.textHeading}>{title}</Text>
+		<View>
+			{title ? <Text style={styles.textHeading}>{title}</Text> : null}
 			<View style={styles.newSection}>
 				{data.length &&
 					data.map((ele) => {
-						return <Card id={ele.id} title={ele.title} IconName={ele.icon} />;
+						return (
+							<Card
+								key={ele.id}
+								id={ele.id}
+								title={ele.title}
+								IconName={ele.icon}
+							/>
+						);
 					})}
 			</View>
 		</View>
@@ -22,7 +29,7 @@ const styles = StyleSheet.create({
 		flexDirection: "row",
 		flexWrap: "wrap",
 		justifyContent: "space-between",
-		columnGap: 2,
+		columnGap: 7,
 		rowGap: 10,
 		paddingHorizontal: 8,
 	},

@@ -57,13 +57,24 @@ export const MAINTAIN_OPTIONS = [
 	{
 		id: 3,
 		title: "Emission check",
-		icon: "thermometer",
+		icon: "flower-pollen",
 	},
 	{
 		id: 4,
 		title: "Fuel prices",
 		icon: "fuel",
 	},
+];
+
+export const VEHICLES_RELATED = [
+	{ id: 1, title: "Vehicle alerts", icon: "bell-alert" },
+	{ id: 2, title: "Upgrade your car", icon: "car-2-plus" },
+	{ id: 3, title: "Vehicle info", icon: "car-info" },
+	{ id: 4, title: "Pay traffic challans", icon: "traffic-light" },
+	{ id: 5, title: "Emission check", icon: "flower-pollen" },
+	{ id: 6, title: "Fuel prices", icon: "fuel" },
+	{ id: 7, title: "Car valuation", icon: "car" },
+	
 ];
 
 export const HELP_SUPPORT = [

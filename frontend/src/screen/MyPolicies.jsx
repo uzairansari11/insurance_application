@@ -1,8 +1,6 @@
 import React from "react";
-import { StyleSheet, Text, View, ScrollView } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 import InsuranceTopSection from "../component/InsuranceTopSection";
-import InsuranceOptionsSection from "../component/InsuranceOptionsSection";
-import { MAINTAIN_OPTIONS, NEW_OPTIONS } from "../constants/constants";
 
 export default function SettingsScreen() {
 	return (

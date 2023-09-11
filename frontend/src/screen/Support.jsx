@@ -9,13 +9,20 @@ export default function Support() {
 			<View style={styles.helpSupport}>
 				<Text style={styles.headingText}>Help & Support</Text>
 				{HELP_SUPPORT.map((ele) => {
-					return <RectangularCard id={ele.id} {...ele} />;
+					return <RectangularCard key={ele.id} id={ele.id} {...ele} />;
 				})}
 			</View>
 			<View style={styles.helpSupport}>
 				<Text style={styles.headingText}>Explore more</Text>
 				{EXPLORE_MORE.map((ele) => {
-					return <RectangularCard id={ele.id} {...ele} paddingVertical={20} />;
+					return (
+						<RectangularCard
+							key={ele.id}
+							id={ele.id}
+							{...ele}
+							paddingVertical={20}
+						/>
+					);
 				})}
 			</View>
 		</ScrollView>
