@@ -10,6 +10,7 @@ import { MAINTAIN_OPTIONS, NEW_OPTIONS } from "../constants/constants";
 export default function HomeScreen({ navigation }) {
 	return (
 		<View style={styles.container}>
+			
 			<View style={styles.welcomeMainContainer}>
 				<View style={styles.welcomeSubContainer}>
 					<Welcome name={"uzair ansari"} />
@@ -23,6 +24,7 @@ export default function HomeScreen({ navigation }) {
 					</TouchableOpacity>
 				</View>
 			</View>
+			
 			<ScrollView showsVerticalScrollIndicator={false}>
 				<ProfileComponent />
 

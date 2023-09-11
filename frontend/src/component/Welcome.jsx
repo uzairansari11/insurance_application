@@ -10,8 +10,6 @@ export default function Welcome({ name }) {
 
 const styles = StyleSheet.create({
 	welcomeText: {
-		// borderWidth: 2,
-		// alignSelf: "flex-start",
 		fontSize: 14,
 	},
 	userName: {
