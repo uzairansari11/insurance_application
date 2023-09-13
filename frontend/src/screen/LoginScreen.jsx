@@ -1,6 +1,5 @@
 import { FontAwesome } from "@expo/vector-icons";
 import { Input } from "@rneui/themed";
-import React, { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import TocButton from "../component/TocButton";
 import { OTP_URL } from "../constants/constants";

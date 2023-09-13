@@ -1,3 +1,8 @@
+/* This is a card component which contain ICON & TEXT,
+|icon|
+|text|
+*/
+
 import { StyleSheet, Text, View } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 export default function Card({ IconName, size, color, title }) {

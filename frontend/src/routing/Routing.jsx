@@ -1,11 +1,23 @@
 import { createStackNavigator } from "@react-navigation/stack";
-import React from "react";
 import ArrowBack from "../component/ArrowBack";
-import { LOGIN_URL, OTP_URL } from "../constants/constants";
+import {
+	ADD_ONS,
+	CAR_INFO,
+	INSURANCE_USER_DETAILS,
+	LOGIN_URL,
+	MAIN_BOTTOM,
+	OTP_URL,
+	PERSONAL_INFO,
+	PROFILE,
+} from "../constants/constants";
 import Login from "../screen/LoginScreen";
 import OtpVerification from "../screen/OtpScreen";
+import PersonalInfoScreen from "../screen/PersonalInfoScreen";
 import ProfileScreen from "../screen/ProfileScreen";
+import AddOns from "../screen/carInsuranceScreens/AddOns";
+import CarDetailsScreen from "../screen/carInsuranceScreens/CarDetailsScreen";
 import BottomTabRouting from "./BottomTabRouting";
+import DetailsScreen from "../screen/carInsuranceScreens/DetailsScreen";
 const Stack = createStackNavigator();
 export default function Routing({ isAuth = true }) {
 	return (
@@ -27,19 +39,50 @@ export default function Routing({ isAuth = true }) {
 				) : (
 					<>
 						<Stack.Screen
-							name="Main"
+							name={MAIN_BOTTOM}
 							component={BottomTabRouting}
 							options={{
 								headerShown: false,
 							}}
 						/>
 						<Stack.Screen
-							name="Profile"
+							name={PROFILE}
 							component={ProfileScreen}
 							options={({ navigation }) => ({
 								headerLeft: () => <ArrowBack navigation={navigation} />,
 								headerTitle: "",
-							
+							})}
+						/>
+						<Stack.Screen
+							name={PERSONAL_INFO}
+							component={PersonalInfoScreen}
+							options={({ navigation }) => ({
+								headerLeft: () => <ArrowBack navigation={navigation} />,
+								headerTitle: "",
+							})}
+						/>
+						<Stack.Screen
+							name={CAR_INFO}
+							component={CarDetailsScreen}
+							options={({ navigation }) => ({
+								headerLeft: () => <ArrowBack navigation={navigation} />,
+								headerTitle: "",
+							})}
+						/>
+						<Stack.Screen
+							name={ADD_ONS}
+							component={AddOns}
+							options={({ navigation }) => ({
+								headerLeft: () => <ArrowBack navigation={navigation} />,
+								headerTitle: "",
+							})}
+						/>
+						<Stack.Screen
+							name={INSURANCE_USER_DETAILS}
+							component={DetailsScreen}
+							options={({ navigation }) => ({
+								headerLeft: () => <ArrowBack navigation={navigation} />,
+								headerTitle: "",
 							})}
 						/>
 					</>

@@ -1,5 +1,4 @@
 import { NavigationContainer } from "@react-navigation/native";
-import * as React from "react";
 import { StatusBar, StyleSheet, View } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import Routing from "./src/routing/Routing";

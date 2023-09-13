@@ -1,5 +1,6 @@
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { DISCOVER, HOME, MY_POLICIES, SUPPORT } from "../constants/constants";
 import Discover from "../screen/Discover";
 import HomeScreen from "../screen/HomeScreen";
 import SettingsScreen from "../screen/MyPolicies";
@@ -20,7 +21,7 @@ export default function BottomTabRouting() {
 			sceneAnimationType="shifting"
 		>
 			<Tab.Screen
-				name="Home"
+				name={HOME}
 				component={HomeScreen}
 				options={{
 					tabBarLabel: "Home",
@@ -34,7 +35,7 @@ export default function BottomTabRouting() {
 				}}
 			/>
 			<Tab.Screen
-				name="MyPolicies"
+				name={MY_POLICIES}
 				component={SettingsScreen}
 				options={{
 					tabBarLabel: "My Policies",
@@ -48,7 +49,7 @@ export default function BottomTabRouting() {
 				}}
 			/>
 			<Tab.Screen
-				name="Discover"
+				name={DISCOVER}
 				component={Discover}
 				options={{
 					tabBarLabel: "Discover",
@@ -62,7 +63,7 @@ export default function BottomTabRouting() {
 				}}
 			/>
 			<Tab.Screen
-				name="Support"
+				name={SUPPORT}
 				component={Support}
 				options={{
 					tabBarLabel: "Support",

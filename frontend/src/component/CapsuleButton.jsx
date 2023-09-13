@@ -1,9 +1,20 @@
+/* This is a button component , use for capsule shape buttons */
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
 
-export default function CapsuleButton({ title, isActive, onPress }) {
+export default function CapsuleButton({
+	title,
+	isActive,
+	onPress,
+	backgroundColor,
+}) {
 	return (
 		<TouchableOpacity
-			style={[styles.container, isActive ? styles.isActive : styles.isInactive]}
+			style={[
+				styles.container,
+				isActive
+					? ({ backgroundColor: backgroundColor } || styles.isActive)
+					: styles.isInactive,
+			]}
 			onPress={onPress}
 		>
 			<Text
@@ -26,6 +37,7 @@ const styles = StyleSheet.create({
 		elevation: 5,
 		shadowColor: "black",
 		alignSelf: "flex-start",
+		margin: 4,
 	},
 	isActive: {
 		backgroundColor: "black",

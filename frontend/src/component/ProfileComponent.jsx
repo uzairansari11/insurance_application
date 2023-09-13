@@ -1,16 +1,21 @@
-import React from "react";
-import { Text, View, StyleSheet } from "react-native";
-import TocButton from "./TocButton";
+import { StyleSheet, Text, View } from "react-native";
 import ProgressBarComponent from "./ProgressBarComponent";
+import TocButton from "./TocButton";
+import { PERSONAL_INFO } from "../constants/constants";
 
-export default function ProfileComponent() {
+export default function ProfileComponent({ navigation }) {
 	return (
 		<View style={styles.container}>
 			<View style={styles.profileSetup}>
 				<Text style={{ fontSize: 16, fontWeight: "700" }}>
 					Set up your profile
 				</Text>
-				<TocButton title={"Setup"} backgroundColor={"black"} textSize={12} />
+				<TocButton
+					title={"Setup"}
+					backgroundColor={"black"}
+					textSize={12}
+					onPress={() => navigation.navigate(PERSONAL_INFO)}
+				/>
 			</View>
 			<View>
 				<ProgressBarComponent />

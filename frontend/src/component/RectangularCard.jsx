@@ -1,6 +1,5 @@
-import * as React from "react";
-import { Avatar, Card } from "react-native-paper";
 import { StyleSheet } from "react-native";
+import { Avatar, Card } from "react-native-paper";
 
 export default function RectangularCard({
 	iconName,
@@ -30,7 +29,7 @@ export default function RectangularCard({
 
 const styles = StyleSheet.create({
 	card: {
-		backgroundColor: "#ffffff", 
+		backgroundColor: "#ffffff",
 		borderWidth: 1,
 		width: "90%",
 		alignSelf: "center",

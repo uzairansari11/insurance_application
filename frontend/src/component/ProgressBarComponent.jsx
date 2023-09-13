@@ -1,4 +1,3 @@
-import React from "react";
 import { View } from "react-native";
 import * as Progress from "react-native-progress";
 
@@ -9,7 +8,7 @@ export default function ProgressBarComponent() {
 				size={60}
 				indeterminate={false}
 				showsText={true}
-				progress={0.5}
+				progress={0.8}
 				thickness={5}
 				fill="yellow"
 				strokeCap={"round"}
@@ -24,7 +23,3 @@ export default function ProgressBarComponent() {
 		</View>
 	);
 }
-
-// <Progress.Pie progress={0.4} size={50} />
-// <Progress.Circle size={30} indeterminate={true} />
-// <Progress.CircleSnail color={['red', 'green', 'blue']} />

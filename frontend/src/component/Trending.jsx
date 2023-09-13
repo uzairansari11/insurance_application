@@ -1,5 +1,4 @@
-import { View, Text, StyleSheet } from "react-native";
-import React from "react";
+import { StyleSheet, Text, View } from "react-native";
 import { MyCarousel } from "./MyCarousel";
 
 export default function Trending({ headingTitle }) {

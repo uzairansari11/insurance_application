@@ -1,4 +1,3 @@
-import React from "react";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import RectangularCard from "../component/RectangularCard";
 import { EXPLORE_MORE, HELP_SUPPORT } from "../constants/constants";

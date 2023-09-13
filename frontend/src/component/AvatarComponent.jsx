@@ -1,3 +1,5 @@
+/* This component is for avatar can be use to show username first letter */
+
 import { Avatar } from "react-native-paper";
 
 const AvatarComponent = ({ size, label, color, backgroundColor }) => (

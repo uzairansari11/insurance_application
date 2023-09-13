@@ -1,4 +1,4 @@
-import React from "react";
+/* This component can be used for icon+ text+ icon */
 import { StyleSheet, Text, View } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 export default function DetailsWithRightArrow({ leftIcon, title, rightIcon }) {

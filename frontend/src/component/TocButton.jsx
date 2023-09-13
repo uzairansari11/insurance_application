@@ -1,3 +1,5 @@
+/* This is a custom TouchableOpacity button  */
+
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
 
 export default function TocButton({
@@ -8,6 +10,8 @@ export default function TocButton({
 	textSize,
 	width,
 	marginTop,
+	paddingVertical,
+	textColor,
 }) {
 	return (
 		<TouchableOpacity
@@ -17,7 +21,8 @@ export default function TocButton({
 					? styles.disabledBackground
 					: { backgroundColor } || styles.enabledBackground,
 				{ width: width || "100%" },
-				{ marginTop: marginTop || 10 },
+				{ marginTop: marginTop },
+				{ paddingVertical: paddingVertical || 10 },
 			]}
 			onPress={onPress}
 			disabled={disabled}
@@ -25,7 +30,7 @@ export default function TocButton({
 			<Text
 				style={{
 					textAlign: "center",
-					color: "white",
+					color: textColor || "white",
 					fontSize: textSize || 20,
 				}}
 			>
@@ -37,7 +42,6 @@ export default function TocButton({
 
 const styles = StyleSheet.create({
 	buttonContainer: {
-		paddingVertical: 10,
 		borderRadius: 6,
 		alignSelf: "center",
 	},

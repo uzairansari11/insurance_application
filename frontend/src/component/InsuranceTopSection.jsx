@@ -1,29 +1,42 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, TextInput, View } from "react-native";
-import { INSURANCE_OPTIONS } from "../constants/constants";
+import { FlatList, StyleSheet, Text, TextInput, View } from "react-native";
 import CapsuleButton from "./CapsuleButton";
 import TocButton from "./TocButton";
-
-export default function InsuranceTopSection() {
-	const [isActive, setActive] = useState(1);
+import { CAR_DATA, CAR_INFO } from "../constants/constants";
+export default function InsuranceTopSection({ data, navigation }) {
 	const discount = 85;
+	const [isActive, setActive] = useState(1);
+	const [searchText, setSearchText] = useState("");
+	const [searchedData, setSearchData] = useState([]);
+
 	const handleActive = (activeTab) => {
 		setActive(activeTab);
 	};
+
+	const handleSearch = () => {
+		const searchedResult = CAR_DATA.find(
+			(ele) => ele.license.toUpperCase() === searchText.toUpperCase()
+		);
+		setSearchData(searchedData);
+		searchedResult
+			? navigation.navigate(CAR_INFO, { searchedResult })
+			: alert(`Not Found`);
+	};
 	return (
 		<View style={styles.container}>
-			<View style={styles.insuranceOptions}>
-				{INSURANCE_OPTIONS.map((ele) => {
-					return (
-						<CapsuleButton
-							key={ele.id}
-							title={ele.title}
-							onPress={() => handleActive(ele.id)}
-							isActive={ele.id === isActive}
-						/>
-					);
-				})}
-			</View>
+			<FlatList
+				horizontal
+				data={data}
+				renderItem={({ item }) => (
+					<CapsuleButton
+						title={item.title}
+						onPress={() => handleActive(item.id)}
+						isActive={item.id === isActive}
+						backgroundColor="black"
+					/>
+				)}
+				keyExtractor={(item) => item.id}
+			/>
 			<Text style={styles.insuranceText}>
 				{`Upto ${discount}% off on car insurance`}
 			</Text>
@@ -31,6 +44,11 @@ export default function InsuranceTopSection() {
 				<TextInput
 					style={styles.inputStyle}
 					placeholder={`Please Enter  ${isActive == 1 ? "Car" : "Bike"} Number`}
+					value={searchText}
+					onChangeText={(text) => {
+						setSearchText(text.toUpperCase());
+					}}
+					maxLength={10}
 				/>
 			) : null}
 			<TocButton
@@ -38,6 +56,7 @@ export default function InsuranceTopSection() {
 				backgroundColor="black"
 				marginTop={20}
 				textSize={18}
+				onPress={handleSearch}
 			/>
 		</View>
 	);
@@ -49,10 +68,7 @@ const styles = StyleSheet.create({
 		paddingHorizontal: 20,
 		paddingVertical: 20,
 	},
-	insuranceOptions: {
-		flexDirection: "row",
-		justifyContent: "space-between",
-	},
+
 	insuranceText: {
 		textAlign: "center",
 		marginTop: 20,
